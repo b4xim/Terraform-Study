@@ -1,0 +1,32 @@
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environments
+venv/
+.env/
+.env
+
+# Ignore Docker files
+docker-compose.override.yml
+*.log
+
+# Ignore Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+
+# Ignore node modules if present
+node_modules/
+
+# Ignore IDE files
+.vscode/
+.idea/
