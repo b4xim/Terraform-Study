@@ -1,7 +1,7 @@
 resource "aws_instance" "tf_ec2_instance" {
     ami           = var.ami_id
     instance_type = var.instance_type
-    key_name      = "Ubuntu-keypair"
+    key_name      = "terraform"
     vpc_security_group_ids = [aws_security_group.tf_security_group.id]
     associate_public_ip_address = true
     user_data = file("userdata.sh")
@@ -39,5 +39,5 @@ resource "aws_security_group" "tf_security_group" {
     
 }
 output "instance_public_command" {
-  value = "ssh -i ~/.ssh/Ubuntu-keypair.pem ubuntu@${aws_instance.tf_ec2_instance.public_ip}"
+  value = "ssh -i ~/.ssh/terraform.pem ubuntu@${aws_instance.tf_ec2_instance.public_ip}"
 }

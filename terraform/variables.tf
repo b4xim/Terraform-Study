@@ -11,12 +11,12 @@ variable "ami_id" {
 variable "instance_type" {
     description = "The type of EC2 instance to create."
     type        = string
-    default     = "t3.micro"
+    default     = "t3.small"
 }
 variable "vpc_id" {
     description = "The VPC to deploy resources in."
     type        = string
-    default     = "vpc-0b3300f0d88a79ba2"
+    default     = "vpc-00d8f9b1ae284ea34"
 }
 variable "my_ip" {
   description = "Your public IP address to allow access to the EC2 instance."
