@@ -11,7 +11,7 @@ resource "aws_instance" "tf_ec2_instance" {
     Name = "Terraform EC2 Instance"
   }
   root_block_device {
-    volume_size = 15
+    volume_size = 10
   }
 }
 
