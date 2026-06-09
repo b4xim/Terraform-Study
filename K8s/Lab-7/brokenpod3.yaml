@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-pod-2
+spec:
+  containers:
+  - name: myapp
+    image: b4xim/nodeapp:v1
+    env:
+    - name: DB_HOST
+      valueFrom:
+        configMapKeyRef:
+          name: app-config
+          key: db_host
